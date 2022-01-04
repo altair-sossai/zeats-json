@@ -1,13 +1,12 @@
 ﻿using System.Text.Json;
 
-namespace Zeats.Json
+namespace Zeats.Json;
+
+public static class JsonConfiguration
 {
-    public static class JsonConfiguration
+    public static readonly JsonSerializerOptions Options = new()
     {
-        public static readonly JsonSerializerOptions Options = new JsonSerializerOptions
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            IgnoreNullValues = true
-        };
-    }
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        IgnoreNullValues = true
+    };
 }
